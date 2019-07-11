@@ -4,5 +4,5 @@
 클릭하면 비디오 재생
 
 
-[![Video Label](http://img.youtube.com/viW-_PS2y2YEE/0.jpg)](https://youtu.be/W-_PS2y2YEE?t=0s)  
+[![Video Label](http://img.youtube.com/vi/W-_PS2y2YEE/0.jpg)](https://youtu.be/W-_PS2y2YEE?t=0s)  
 클릭하면 비디오 재생
