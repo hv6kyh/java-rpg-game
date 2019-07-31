@@ -57,7 +57,7 @@ if (reachPortal() == true) {
 }
 ```
 메인 프레임의 setCurrentPanel() 메소드를 호출하여 알맞는 패널로 교체한다.  
-
+*****
 
 
 
@@ -73,7 +73,7 @@ protected PlayerCharactor playerCharactor = PlayerCharactor.getInstance();
 사용자 캐릭터는 싱글톤패턴으로 제작.  
 객체를 한번 생성하고, 그 이후 생성된 인스턴스를 사용한다.  
 개념상 단 한 명이어야 하는 사용자 캐릭터의 특성상, 불필요한 충돌을 없앤다.
-
+*****
 
 
 
