@@ -19,7 +19,7 @@ JAVA 언어를 이용한 RPG 게임
 *****
 
 
-
+### 맵 이동
 
 모든 맵은 각각 하나의 Panel로 구현됨.  
 
@@ -65,7 +65,7 @@ if (reachPortal() == true) {
 
 
 
-
+### 싱글톤 패턴
 Map.java
 ```JAVA
 protected PlayerCharactor playerCharactor = PlayerCharactor.getInstance();
@@ -81,7 +81,7 @@ protected PlayerCharactor playerCharactor = PlayerCharactor.getInstance();
 
 
 
-
+### 캐릭터 그리기
 PlayerCharactor.java
 ```JAVA
 public void draw(Graphics g) {
