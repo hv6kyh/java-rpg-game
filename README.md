@@ -62,3 +62,28 @@ protected PlayerCharactor playerCharactor = PlayerCharactor.getInstance();
 사용자 캐릭터는 싱글톤패턴으로 제작.  
 객체를 한번 생성하고, 그 이후 생성된 인스턴스를 사용한다.  
 개념상 단 한 명이어야 하는 사용자 캐릭터의 특성상, 불필요한 충돌을 없앤다.
+
+PlayerCharactor.java
+```JAVA
+public void draw(Graphics g) {
+
+  Graphics2D g2d = (Graphics2D)g;
+  int width = (int)(40*this.stat.getHp()/maxHp);
+
+  switch (curState) {
+
+  case walk :
+    g2d.drawImage(walk_img, p.x, p.y, p.x+charactorSize.width*scale, p.y+charactorSize.height*scale, (col)*charactorSize.width, (row)*charactorSize.height, (col+1)*charactorSize.width, (row+1)*charactorSize.height, this);
+    g2d.drawImage(hpbar, p.x, p.y+this.charactorSize.height, width, 10, this);
+
+
+    break;
+
+    ...
+
+  }
+```
+![image1](TheWorld/res/player_charactor/arsis_basic.png)
+PlayerCharactor.java의 draw() 메소드는 사용자 캐릭터를 화면에 그려주는 메소드.   
+이때 사용되는 이미지는 위와 같은 캐릭터의 전체 이동 모습이 담긴 4X4 캐릭터 칩셋이다.  
+캐릭터의 이동방향에 따라 알맞은 열과 행을 계산하여 필요한 부분만을 화면에 보여준다.  
