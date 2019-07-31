@@ -18,7 +18,8 @@ JAVA 언어를 이용한 RPG 게임
 [![Video Label](http://img.youtube.com/vi/W-_PS2y2YEE/0.jpg)](https://youtu.be/W-_PS2y2YEE?t=0s)  
 *****
 모든 맵은 각각 하나의 Panel로 구현됨.  
-AfricaDungeon1.java  (AfricaDungeon1은 MAP을 상속받음.)
+
+AfricaDungeon1.java  (AfricaDungeon1은 Map을 상속받음.)
 ```JAVA
 @Override
 public boolean reachPortal() {
@@ -52,4 +53,12 @@ if (reachPortal() == true) {
 }
 ```
 메인 프레임의 setCurrentPanel() 메소드를 호출하여 알맞는 패널로 교체한다.  
-사용자 캐릭터는 싱글톤디자인으로 제작.  
+
+
+Map.java
+```JAVA
+protected PlayerCharactor playerCharactor = PlayerCharactor.getInstance();
+```
+사용자 캐릭터는 싱글톤패턴으로 제작.  
+객체를 한번 생성하고, 그 이후 생성된 인스턴스를 사용한다.  
+개념상 단 한 명이어야 하는 사용자 캐릭터의 특성상, 불필요한 충돌을 없앤다.
